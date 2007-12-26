@@ -1,0 +1,16 @@
+--- icemon-kde3/src/icemon.desktop.old	2007-12-26 12:25:52.000000000 +0100
++++ icemon-kde3/src/icemon.desktop	2007-12-26 12:26:29.000000000 +0100
+@@ -11,6 +11,7 @@
+ GenericName[sv]=Icecream-övervakare
+ GenericName[xx]=xxIcecream Monitorxx
+ Name=Icemon
++Icon=icemon.png
+ Name[xx]=xxIcemonxx
+ Comment=A monitor for an Icecream compilation network
+ Comment[da]=Overvågning af et Icecream-kompileringsnetværk
+@@ -25,4 +26,4 @@
+ DocPath=icemon/index.html
+ Type=Application
+ Terminal=false
+-Categories=Qt;KDE;Development;
++Categories=KDE;Application;Development;
