@@ -1,3 +1,7 @@
+# TODO:
+# - fix desktop file (Categories)
+# - add Icon to desktop file
+
 Summary:	Monitor for icecram
 Summary(pl.UTF-8):	Monitor dla icecream
 Name:		icemon-kde3
@@ -8,7 +12,7 @@ Group:		Applications
 Source0:	ftp://ftp.suse.com/pub/projects/icecream/%{name}.tar.bz2
 # Source0-md5:	c761b9a96007d5adc95b624d0e909ca5
 URL:		http://en.opensuse.org/Icecream
-BuildRequires:	icecream-devel
+BuildRequires:	icecream-devel >= 0.7.14-2
 BuildRequires:	kdelibs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
