@@ -1,16 +1,14 @@
-# TODO:
-# - fix desktop file (Categories)
-# - add Icon to desktop file
 
 Summary:	Monitor for icecram
 Summary(pl.UTF-8):	Monitor dla icecream
 Name:		icemon-kde3
 Version:	01
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	ftp://ftp.suse.com/pub/projects/icecream/%{name}.tar.bz2
 # Source0-md5:	c761b9a96007d5adc95b624d0e909ca5
+Patch0:		%{name}.desktop.patch
 URL:		http://en.opensuse.org/Icecream
 BuildRequires:	icecream-devel >= 0.7.14-2
 BuildRequires:	kdelibs-devel
@@ -24,6 +22,7 @@ Monitor dla icecream.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p0
 
 %build
 %configure
@@ -34,12 +33,14 @@ Monitor dla icecream.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_kdedocdir}/en/icemon
+install -d $RPM_BUILD_ROOT%{_kdedocdir}/en/icemon \
+	$RPM_BUILD_ROOT%{_pixmapsdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 mv $RPM_BUILD_ROOT%{_datadir}/doc/HTML/en/icemon/* $RPM_BUILD_ROOT%{_kdedocdir}/en/icemon/
+cp $RPM_BUILD_ROOT%{_datadir}/apps/icemon/pics/icemonnode.png $RPM_BUILD_ROOT%{_pixmapsdir}/icemon.png
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,3 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/icemon/pics/icemonnode.png
 %{_datadir}/apps/kicker/applets/icemonapplet.desktop
 %{_desktopdir}/kde/icemon.desktop
+%{_pixmapsdir}/icemon.png
