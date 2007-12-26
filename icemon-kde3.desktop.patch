@@ -8,9 +8,3 @@
  Name[xx]=xxIcemonxx
  Comment=A monitor for an Icecream compilation network
  Comment[da]=Overvågning af et Icecream-kompileringsnetværk
-@@ -25,4 +26,4 @@
- DocPath=icemon/index.html
- Type=Application
- Terminal=false
--Categories=Qt;KDE;Development;
-+Categories=KDE;Application;Development;
