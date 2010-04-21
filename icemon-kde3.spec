@@ -2,7 +2,7 @@ Summary:	Monitor for icecream
 Summary(pl.UTF-8):	Monitor dla icecream
 Name:		icemon-kde3
 Version:	01
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications
 Source0:	ftp://ftp.suse.com/pub/projects/icecream/%{name}.tar.bz2
